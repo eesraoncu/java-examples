@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter the A");
+        int a = scn.nextInt();
+        System.out.println("enter the B");
+        int b = scn.nextInt();
+        System.out.println("enter the C");
+        int c = scn.nextInt();
+        double d = Math.pow(b,2) - (4 * a * c);
+        if (d>0){
+            double x1=(-b+ Math.sqrt(d))/(2*a);
+            double x2=(-b- Math.sqrt(d))/(2*a);
+            System.out.println("two real roots: x1= "+ x1+ " x2= "+ x2);
+        }else if(d==0){
+            double x=(-b/(2.0*a));
+            System.out.println("one real root: x= "+ x);
+        }else{
+            System.out.println("this equation has complex roots.");
+        }
+    }
+}
