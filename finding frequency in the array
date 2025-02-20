@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Enter the number of dimensions of the array:");
+        int dimension = scn.nextInt();
+        int[] array = new int[dimension];
+        for (int i = 0; i < dimension; i++) {
+            System.out.println("enter the "+(i+1)+".number:");
+            array[i] = scn.nextInt();
+        }
+        System.out.println("Element frequencies in the array:");
+        for (int i = 0; i < dimension; i++) {
+            int frequency = 1;
+            for (int j = i + 1; j < dimension; j++) {
+                if (array[i] == array[j]) {
+                    frequency++;
+                    array[j] = -1;
+                }
+            }
+            if (array[i] != -1) {
+                System.out.println(array[i] + ":" + frequency);
+            }
+        }
+    }
+}
