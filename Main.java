@@ -2,11 +2,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        System.out.println("kenar uzunluğunu girin:");
-        float kenar_a= scn.nextFloat();
-        System.out.println("yüksekliği girin:");
-        float kenar_h= scn.nextFloat();
-        float alan=kenar_a*kenar_h/2;
-        System.out.println(alan);
+        System.out.println("enter the lenght of edge: ");
+        float edge_a= scn.nextFloat();
+        System.out.println("enter the height:");
+        float edge_h= scn.nextFloat();
+        float area=edge_a*edge_h/2;
+        System.out.println(area);
     }
 }
