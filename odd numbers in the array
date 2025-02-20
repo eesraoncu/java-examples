@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int[] numbers = new int[10];
+        int[] oddNumbers = new int[10];
+        int k = 0;
+        for (int i = 0; i < 10; i++) {
+            System.out.println("enter the "+ i+1 +".number");
+            numbers[i] = scn.nextInt();
+        }
+        for (int i = 0; i < 10; i++) {
+            if (numbers[i] % 2 == 1) {
+                oddNumbers[k] = numbers[i];
+                k++;
+            }
+        }
+        System.out.println("even numbers\n");
+        for (int i = 0; i < k; i++) {
+            {
+        System.out.println("even numbers:" + oddNumbers[i]);
+            }
+        }
+    }
+}
