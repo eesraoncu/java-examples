@@ -8,7 +8,8 @@ public class Main {
         float edge_b = scn.nextFloat();
         System.out.println("enter the angle between:");
         float angle = scn.nextFloat();
-        float area = (float) ((edge_a * edge_b * Math.sin(angle)) / 2);
-        System.out.println("the area of the triangle is " + area);
+        double angleInRadians = Math.toRadians(angle);
+        float area = (float) ((edge_a * edge_b * Math.sin(angleInRadians)) / 2);
+        System.out.println("The area of the triangle is " + area);
     }
 }
